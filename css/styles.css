@@ -312,24 +312,19 @@ html {
   box-sizing: border-box;
 }
 
-/* --------------------------- BASE --------------------------- */
+/* --------------------------- BODY --------------------------- */
+/* --------------------------- GLOBAL --------------------------- */
 body {
-  font-family: "Spline Sans", sans-serif;
+  font-family: "Barlow", sans-serif; /* clean body font */
   font-weight: 300;
   min-width: 320px;
-
-  /* Magical parchment background vibe */
-  background: #f3e9d7 url('images/parchment-texture.png');
-  background-size: cover;
-  background-attachment: fixed;
-  color: #2d1b0d;
+  background-color: #fdf6e3; /* parchment tone */
+  color: #1a1a1a;
 }
 
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  border-bottom: 2px solid #c8a46a;
-  background-color: #1c1b29; /* deep Hogwarts navy */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid #d3a625; /* gold accent */
 }
 
 header {
@@ -339,13 +334,12 @@ header {
   align-items: center;
   padding: 0.5rem 10px;
 }
-
 header span {
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #e4d3a1; /* warm gold */
+  font-family: "Cinzel", serif; /* magical serif */
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0b1d3a; /* deep midnight blue */
   letter-spacing: 1px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 /* --------------------------- NAVIGATION --------------------------- */
@@ -355,45 +349,42 @@ header span {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #e4d3a1;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  color: #0b1d3a;
 }
 #hamburgerBtn::before {
   content: "☰";
 }
 
 nav {
-  background-color: #f3f2f5; /* night purple */
+  background-color: #1a1a1a; /* dark stone */
   width: 180px;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   transform: translateX(100%);
-  border-left: 2px solid #c8a46a;
 }
-
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 nav ul li a {
   display: block;
   padding: 0.9rem 0.5rem;
   text-align: right;
-  border-bottom: 1px rgba(255,255,255,0.15) solid;
+  border-bottom: 1px rgba(255, 255, 255, 0.25) solid;
   text-decoration: none;
-  color: #5e0d65;
-  font-weight: 300;
+  color: #fdf6e3;
+  font-family: "Cinzel", serif;
 }
 nav ul li a:hover {
-  background-color: rgba(255,255,255,0.1);
+  background-color: #d3a625;
+  color: #0b1d3a;
 }
 nav li.active a {
-  color: #2c2542;
-  background-color: #e4d3a1;
+  color: #d3a625;
+  background-color: #000;
 }
 
 .moveOver #hamburgerBtn::before {
@@ -412,151 +403,149 @@ nav li.active a {
 
 /* --------------------------- MAIN --------------------------- */
 main h1 {
+  font-family: "Cinzel", serif;
   padding: 1rem 10px 0.5rem 10px;
-  font-size: 1.8rem;
-  color: #1c1b29;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-size: 2rem;
+  color: #0b1d3a;
+  font-weight: 700;
+  border-bottom: 2px solid #d3a625;
+  padding-bottom: 0.5rem;
 }
-
 main p {
   padding: 0.5rem 10px;
-  color: #3e2a1b;
+  color: #1a1a1a;
   line-height: 150%;
 }
 
-/* --------------------------- CARDS --------------------------- */
 #cards {
   padding: 10px;
 }
-
 #cards section {
   display: grid;
   grid-template-areas: "name" "photo" "address" "tel";
   padding-bottom: 10px;
-  background-color: #fff8e8; /* soft parchment card */
+  background-color: #ffffff;
   margin: 10px;
   border-radius: 8px;
-  border: 2px solid #c8a46a; /* gold rim */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border: 1px solid #d3a625;
+  box-shadow: 0 4px 12px rgba(11,29,58,0.2);
 }
-
 #cards img {
   grid-area: photo;
   width: 100%;
   height: auto;
   border-radius: 5px;
   padding: 0.25rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-
 #cards h2 {
   grid-area: name;
+  background-color: #fdf6e3;
   margin: 0;
   padding: 0.5rem;
-  color: #1c1b29;
-  font-weight: 500;
-  background-color: #e4d3a1;
+  color: #0b1d3a;
   border-radius: 5px 5px 0 0;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+  font-family: "Cinzel", serif;
 }
-
 #cards address {
   grid-area: address;
-  padding: 0.25rem 0.75rem;
-  color: #3e2a1b;
+  padding: 0.5rem;
+  color: #946b2d; /* bronze accent */
 }
-
 #cards a {
   grid-area: tel;
   text-align: center;
-  background-color: #2c2542; /* night purple */
-  color: #e4d3a1;
+  background-color: #d3a625; /* gold button */
+  color: #1a1a1a;
   text-decoration: none;
   padding: 0.6rem;
-  margin: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  margin: 0 1rem 0 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: background-color 300ms ease;
 }
 #cards a:hover {
-  background-color: #1c1b29;
+  background-color: #0b1d3a;
+  color: #fdf6e3;
 }
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #1c1b29;
+  background-color: #1a1a1a;
 }
 
 footer {
   font-size: 0.85rem;
   padding: 1rem 10px;
-  color: #e4d3a1;
+  color: #fdf6e3;
   text-align: center;
   line-height: 150%;
+  font-family: "Barlow", sans-serif;
 }
 footer a {
-  color: #fff8e8;
+  color: #d3a625;
 }
 
 /* --------------------------- MEDIA QUERIES --------------------------- */
 @media only screen and (min-width: 35rem) {
   #cards section {
-    grid-template-areas:
-      "photo name"
-      "photo address"
-      "photo tel";
+    grid-template-areas: "photo name" "photo address" "photo tel";
     column-gap: 8px;
     padding: 0;
   }
   #cards img {
     width: 300px;
+    height: auto;
   }
   #cards a {
+    padding-bottom: 0.5rem;
     margin: 1rem;
   }
 }
-
 @media only screen and (min-width: 64rem) {
   header, nav, main {
     max-width: 960px;
     margin: auto;
   }
-
   #hamburgerBtn {
     display: none;
   }
   .moveOver > .content {
     transform: translateX(0px);
   }
-
   #navWrapper {
-    border-bottom: 2px solid #c8a46a;
+    border-bottom: 2px solid #d3a625;
   }
-
   nav {
     background-color: transparent;
     position: static;
     transform: translateX(0);
     width: auto;
-    border: none;
   }
-
   nav ul {
     display: flex;
     margin-left: 10px;
-    border-left: 1px solid rgba(255,255,255,0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
   }
-
   nav ul li a {
     padding: 0.6rem 1.5rem;
     border: none;
-    border-right: 1px solid rgba(255,255,255,0.2);
-  }
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
 
+    /* ✨ Legibility improvements */
+    color: #0b1d3a;              /* deep midnight blue text */
+    font-weight: 600;            /* stronger weight */
+    font-family: "Cinzel", serif;
+    background-color: #fdf6e3;   /* parchment backdrop for contrast */
+    transition: color 250ms ease, border-bottom 250ms ease;
+  }
+  nav ul li a:hover {
+    background-color: #d3a625;   /* gold hover */
+    color: #1a1a1a;              /* dark text on gold */
+    border-bottom: 2px solid #946b2d; /* bronze underline accent */
+  }
   #cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 }
